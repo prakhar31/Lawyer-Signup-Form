@@ -1,0 +1,832 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Lawyer Form</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href=
+    "https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+    rel="stylesheet">
+    <link href="css/plugins/daterangepicker/daterangepicker-bs3.css" rel="stylesheet">
+    <link href="css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/css/select2.min.css">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <style type="text/css">
+        .inputfile {
+            width: 0.1px;
+            height: 0.1px;
+            opacity: 0;
+            overflow: hidden;
+            position: absolute;
+            z-index: 1;
+        }
+</style>
+</head>
+<body>
+    <div class="wrapper wrapper-content animated fadeInRight" style=
+    "padding-left: 7vw;">
+    <form role="form" name="my_form">
+        <h1>Lawyer SignUp Form</h1><br>
+        <div class="row">
+            <div class="col-lg-11">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title collaps-link">
+                        <h5>User Details <small></small></h5>
+                    </div>
+                    <div class="ibox-content collapse in" id="one">
+                    <div id="page_1">
+                        <div class= "row">
+                            <div class= "col-sm-5 b-r">
+                                    <div class="form-group">
+                                        <label>Name</label> <input checked=
+                                        "checked" class="form-control"
+                                        placeholder="Enter Name" required="required"
+                                        type="text">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Email ID</label> <input checked=
+                                        "checked" class="form-control"
+                                        placeholder="Enter ID" required="required"
+                                        type="email">
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group" id=
+                                            "data_2">
+                                                <label>Date Of Birth</label>
+                                                <div class="input-group date">
+                                                    <span class=
+                                                    "input-group-addon"><i class="fa fa-calendar">
+                                                    </i></span><input class=
+                                                    "form-control" placeholder=
+                                                    "mm/dd/yyyy" required="required"
+                                                    type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label>Gender</label>
+                                                <select class="form-control" required="required">
+                                                 <option value='Male'>Male</option>
+                                                <option value='Female'>Female</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Mobile Number</label>
+                                        <input class="form-control"
+                                        placeholder="Enter Mobile Number"
+                                        required="required" type="number">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Username</label> <input class=
+                                        "form-control" placeholder=
+                                        "Enter Username" required="required" type=
+                                        "text">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Password</label> <input class="form-control" placeholder=
+                                        "Enter Password" name="password" required="required" type=
+                                        "password" id="passregister">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Confirm Password</label>
+                                        <input name="confirmpassword" class="form-control"
+                                        placeholder="Enter Password" required="required" type="password" id="conpass">
+                                    </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <h3>Education</h3>
+                                    <div id="collegenew">
+                                        <div id="newcollege">
+                                            <div class="form-group">
+                                                <label>Law College</label>
+                                                <input class="form-control"
+                                                placeholder=
+                                                "Enter Name of College"
+                                                required="required" type="text">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Degree</label>
+                                                <input class="form-control"
+                                                placeholder=
+                                                "Enter Degree Name"
+                                                required="required" type="text">
+                                            </div>
+                                            <div class="form-group" id=
+                                            "data_2">
+                                                <label>Year Of
+                                                Graduation</label>
+                                                <div class="input-group date">
+                                                    <span class=
+                                                    "input-group-addon"><i class="fa fa-calendar">
+                                                    </i></span><input class=
+                                                    "form-control" placeholder=
+                                                    "mm/dd/yyyy" required=
+                                                    "" type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary"
+                                    onclick="Add2(this);" type="button">Add
+                                    College</button>
+                                    <button class="btn btn-primary"
+                                    onclick="Remove2(this);" type="button" style="display:none">Remove
+                                    College</button>
+                            </div>
+                            </div>
+                            
+                        <div align="right">
+                            <div class="btn btn-primary" id= "one1">Next</div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <div class="row">
+            <div class="col-lg-11">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title collapse-link">
+                        <h5>Legal Information</h5>
+                    </div>
+                    <div class="panel-collapse collapse" id="collapse1">
+                        <div class="ibox-content">
+                            <div class="row">
+                                <div id="page_2">
+                                    <div class="col-sm-5 b-r">
+                                        <div class="form-group">
+                                            <label>Practice Area</label> <br>   
+                                            <select class="form-control" id="state_sel" multiple="multiple" style="width: 100%;">
+<option value='Andaman and Nicobar Islands'>Andaman and Nicobar Islands</option>
+<option value='Andhra Pradesh'>Andhra Pradesh</option>
+<option value='Arunachal Pradesh'>Arunachal Pradesh</option>
+<option value='Assam'>Assam</option>
+<option value='Bihar'>Bihar</option>
+<option value='Chandigarh'>Chandigarh</option>
+<option value='Chhattisgarh'>Chhattisgarh</option>
+<option value='Dadra and Nagar Haveli'>Dadra and Nagar Haveli</option>
+<option value='Daman and Diu'>Daman and Diu</option>
+<option value='Delhi'>Delhi</option>
+<option value='Goa'>Goa</option>
+<option value='Gujarat'>Gujarat</option>
+<option value='Haryana'>Haryana</option>
+<option value='Himachal Pradesh'>Himachal Pradesh</option>
+<option value='Jammu and Kashmir'>Jammu and Kashmir</option>
+<option value='Jharkhand'>Jharkhand</option>
+<option value='Karnataka'>Karnataka</option>
+<option value='Kerala'>Kerala</option>
+<option value='Lakshadweep'>Lakshadweep</option>
+<option value='Madhya Pradesh'>Madhya Pradesh</option>
+<option value='Maharashtra'>Maharashtra</option>
+<option value='Manipur'>Manipur</option>
+<option value='Meghalaya'>Meghalaya</option>
+<option value='Mizoram'>Mizoram</option>
+<option value='Nagaland'>Nagaland</option>
+<option value='Odisha'>Odisha</option>
+<option value='Puducherry'>Puducherry</option>
+<option value='Punjab'>Punjab</option>
+<option value='Rajasthan'>Rajasthan</option>
+<option value='Sikkim'>Sikkim</option>
+<option value='Tamil Nadu'>Tamil Nadu</option>
+<option value='Telengana'>Telengana</option>
+<option value='Tripura'>Tripura</option>
+<option value='Uttar Pradesh'>Uttar Pradesh</option>
+<option value='Uttarakhand'>Uttarakhand</option>
+<option value='West Bengal'>West Bengal</option>
+</select>
+                                                </div>
+                                                <div id="add">
+                                            <div id="court">
+                                                <div class="form-group">
+                                                    <label>Court</label>
+                                                    <input class="form-control"
+                                                    placeholder=
+                                                    "Enter Court you have worked in"
+                                                    required="required" type="text">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        
+                                        <button class="btn btn-primary"
+                                        onclick="Add(this);" type="button">Add
+                                        Court</button>
+                                        <button class="btn btn-primary"
+                                        onclick="Remove(this);" type="button" style="display: none">Remove Court</button>
+                                    </div>
+                                
+                                <div class="col-sm-6">
+                                    <div>
+                                        <div class="form-group">
+                                            <label>State</label>  <select class="form-control">
+<option value='Andaman and Nicobar Islands'>Andaman and Nicobar Islands</option>
+<option value='Andhra Pradesh'>Andhra Pradesh</option>
+<option value='Arunachal Pradesh'>Arunachal Pradesh</option>
+<option value='Assam'>Assam</option>
+<option value='Bihar'>Bihar</option>
+<option value='Chandigarh'>Chandigarh</option>
+<option value='Chhattisgarh'>Chhattisgarh</option>
+<option value='Dadra and Nagar Haveli'>Dadra and Nagar Haveli</option>
+<option value='Daman and Diu'>Daman and Diu</option>
+<option value='Delhi'>Delhi</option>
+<option value='Goa'>Goa</option>
+<option value='Gujarat'>Gujarat</option>
+<option value='Haryana'>Haryana</option>
+<option value='Himachal Pradesh'>Himachal Pradesh</option>
+<option value='Jammu and Kashmir'>Jammu and Kashmir</option>
+<option value='Jharkhand'>Jharkhand</option>
+<option value='Karnataka'>Karnataka</option>
+<option value='Kerala'>Kerala</option>
+<option value='Lakshadweep'>Lakshadweep</option>
+<option value='Madhya Pradesh'>Madhya Pradesh</option>
+<option value='Maharashtra'>Maharashtra</option>
+<option value='Manipur'>Manipur</option>
+<option value='Meghalaya'>Meghalaya</option>
+<option value='Mizoram'>Mizoram</option>
+<option value='Nagaland'>Nagaland</option>
+<option value='Odisha'>Odisha</option>
+<option value='Puducherry'>Puducherry</option>
+<option value='Punjab'>Punjab</option>
+<option value='Rajasthan'>Rajasthan</option>
+<option value='Sikkim'>Sikkim</option>
+<option value='Tamil Nadu'>Tamil Nadu</option>
+<option value='Telengana'>Telengana</option>
+<option value='Tripura'>Tripura</option>
+<option value='Uttar Pradesh'>Uttar Pradesh</option>
+<option value='Uttarakhand'>Uttarakhand</option>
+<option value='West Bengal'>West Bengal</option>
+</select>
+                                        </div>
+                                        <div class="form-group">
+                                                    <label>City</label>
+                                                    <input class="form-control"
+                                                    placeholder=
+                                                    "Enter City Here"
+                                                    required="required" type="text">
+                                                </div>
+                                        <div class="form-group">
+                                            <label>Office Address</label>
+                                            <input class="form-control"
+                                            placeholder="Enter Office Address"
+                                            required="required" type="text">
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                        </div>
+                            <div align="right">
+                                <br>
+                                <br>
+                                <button class="btn btn-primary" id="back1"
+                                type="button">Back</button>
+                                 <button class=
+                                "btn btn-primary" id="two" type=
+                                "submit">Next</button>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">    
+            <div class="col-lg-11">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title collapse-link">
+                        <h5>Basic Details</h5>
+                    </div>
+                    <div class="panel-collapse collapse" id="collapse2">
+                        <div class="ibox-content">
+                            <div class="row">
+                            <div id="page_3">
+                                <div class="col-sm-5 b-r">
+                                    
+                                        <h3>Experience</h3>
+                                        <div id="jobnew">
+                                            <div id="job">
+                                                <div class="form-group">
+                                                    <label>Job Title</label>
+                                                    <input class="form-control"
+                                                    placeholder=
+                                                    "Enter Job Title" required=
+                                                    "" type="text">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Company Name</label>
+                                                    <input class="form-control"
+                                                    placeholder=
+                                                    "Enter Company Name"
+                                                    required="required" type="text">
+                                                </div>
+                                                 <div class="form-group" id=
+                                            "data_5">
+                                                <label>Time Duration</label>
+                                                 <div class="input-daterange input-group" id="datepicker">
+                                    <input type="text" class="input-sm form-control" placeholder="From" required="required" />
+                                    <span class="input-group-addon">to</span>
+                                    <input type="text" class="input-sm form-control"  placeholder="To" required="required" />
+                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-primary"
+                                        onclick="Add1(this);" type="button">Add Job </button>
+                                        <button class="btn btn-primary"
+                                        onclick="Remove1(this);" type="button" style="display: none">Remove
+                                        Job </button>
+                                    
+                                </div>
+                            
+
+                                <div class="col-sm-6">
+                                    <div>
+                                        <div class="form-group">
+                                            <label>Summary</label> 
+                                            <textarea class="form-control"
+                                            style="height:15vh;" required="required">
+</textarea>
+</div>
+                                        </div>
+                         </div>
+                            </div>
+                            </div><br>
+                            <div align="right">
+                                <button class="btn btn-primary" id="back2"
+                                type="button">Back</button> <button class=
+                                "btn btn-primary" id="three" type=
+                                "button">Next</button>
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+            </div>
+         </div>   
+<div class="row">
+    <div class="col-lg-11">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title collapse-link">
+                        <h5>Honours and Publications</h5>
+                    </div>
+                    <div class="panel-collapse collapse" id="collapse3">
+                        <div class="ibox-content">
+                            <div class="row">
+                                <div id="page_4">
+                                <div class="col-sm-5 b-r">
+                                    
+                                        <h3>Honours</h3>
+                                        <div id="honournew">
+                                            <div id="honour">
+                                                <div class="form-group">
+                                                    <label>Given By</label>
+                                                    <input class="form-control"
+                                                    placeholder=
+                                                    "Enter Name" required=
+                                                    "" type="text">
+                                                </div>
+                                               
+                                                 <div class="form-group" id=
+                                            "data_2">
+                                                <label>Year of Winning</label>
+                                                 <div class="input-group date">
+                                                    <span class=
+                                                    "input-group-addon"><i class="fa fa-calendar">
+                                                    </i></span><input class=
+                                                    "form-control" placeholder=
+                                                    "Year Of Winning" required="required"
+                                                    type="text">
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-primary"
+                                        onclick="Add6(this);" type="button">Add Honour </button>
+                                        <button class="btn btn-primary"
+                                        onclick="Remove6(this);" type="button" style="display: none">Remove
+                                        Honour </button>
+                                    </div>
+                                
+                            
+
+                                <div class="col-sm-6">
+                                    <div>
+                                        <h3>Publications</h3>
+                                        <div id="awardnew">
+                                            <div id="award">
+                                                <div class="form-group">
+                                                    <label>Title</label>
+                                                    <input class="form-control"
+                                                    placeholder=
+                                                    "Enter title of Publication" required=
+                                                    "" type="text">
+                                                </div>
+                                               
+                                                 <div class="form-group" id=
+                                            "data_2">
+                                                <label>Year of Publishing</label>
+                                                 <div class="input-group date">
+                                                    <span class=
+                                                    "input-group-addon"><i class="fa fa-calendar">
+                                                    </i></span><input class=
+                                                    "form-control" placeholder=
+                                                    "Enter Year" required="required"
+                                                    type="text">
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-primary"
+                                        onclick="Add5(this);" type="button">Add Publication </button>
+                                        <button class="btn btn-primary"
+                                        onclick="Remove5(this);" type="button" style="display: none">Remove
+                                        Publication </button>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div><br>
+                            <div align="right">
+                                <button class="btn btn-primary" id="back3"
+                                type="button">Back</button> <button class=
+                                "btn btn-primary" id="four" type=
+                                "button">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</div>
+<div class="row">
+            <div class="col-lg-11">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title collapse-link">
+                        <h5>Bar Council Information</h5>
+                    </div>
+                    <div class="panel-collapse collapse" id="collapse4">
+                        <div class="ibox-content">
+                            <div class="row">
+                            <div id="page_5">
+                                <div class="col-sm-5 b-r">
+                                    
+                                        <div class="form-group">
+                                            <label>State</label> <select class="form-control" required="required">
+<option value='Andaman and Nicobar Islands'>Andaman and Nicobar Islands</option>
+<option value='Andhra Pradesh'>Andhra Pradesh</option>
+<option value='Arunachal Pradesh'>Arunachal Pradesh</option>
+<option value='Assam'>Assam</option>
+<option value='Bihar'>Bihar</option>
+<option value='Chandigarh'>Chandigarh</option>
+<option value='Chhattisgarh'>Chhattisgarh</option>
+<option value='Dadra and Nagar Haveli'>Dadra and Nagar Haveli</option>
+<option value='Daman and Diu'>Daman and Diu</option>
+<option value='Delhi'>Delhi</option>
+<option value='Goa'>Goa</option>
+<option value='Gujarat'>Gujarat</option>
+<option value='Haryana'>Haryana</option>
+<option value='Himachal Pradesh'>Himachal Pradesh</option>
+<option value='Jammu and Kashmir'>Jammu and Kashmir</option>
+<option value='Jharkhand'>Jharkhand</option>
+<option value='Karnataka'>Karnataka</option>
+<option value='Kerala'>Kerala</option>
+<option value='Lakshadweep'>Lakshadweep</option>
+<option value='Madhya Pradesh'>Madhya Pradesh</option>
+<option value='Maharashtra'>Maharashtra</option>
+<option value='Manipur'>Manipur</option>
+<option value='Meghalaya'>Meghalaya</option>
+<option value='Mizoram'>Mizoram</option>
+<option value='Nagaland'>Nagaland</option>
+<option value='Odisha'>Odisha</option>
+<option value='Puducherry'>Puducherry</option>
+<option value='Punjab'>Punjab</option>
+<option value='Rajasthan'>Rajasthan</option>
+<option value='Sikkim'>Sikkim</option>
+<option value='Tamil Nadu'>Tamil Nadu</option>
+<option value='Telengana'>Telengana</option>
+<option value='Tripura'>Tripura</option>
+<option value='Uttar Pradesh'>Uttar Pradesh</option>
+<option value='Uttarakhand'>Uttarakhand</option>
+<option value='West Bengal'>West Bengal</option>
+</select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Bar ID</label> <input class=
+                                            "form-control" placeholder=
+                                            "Enter Bar ID" required="required" type=
+                                            "text">
+                                        </div>
+                                    
+                                </div>
+                                <div class="col-sm-6">
+                                    <div role="form">
+                                        <div class="form-group">
+                                            <label>Enrollment Year</label>
+                                            <input class="form-control"
+                                            placeholder="Enter Enrollment Year" type="text" required="required">
+                                        </div>
+                                        <button class="btn btn-primary"
+                                        type="file"><input type="file" class="inputfile" id="file">Upload Profile Picture</button>
+<br><br>
+                                        <button class="btn btn-primary"
+                                        type="file"><input type="file" class="inputfile" id="file">Upload Bar ID</button>
+                                    </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div align="right"><br><br>
+                                <button class="btn btn-primary" id="back4"
+                                type="button">Back</button> <button class=
+                                "btn btn-primary" type="submit">Submit</button>
+                            </div>
+                        
+                    
+                </div>
+                </div>
+                </div>
+                </div>
+                </form>
+                </div>
+
+
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/new.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/js/select2.min.js"></script>
+    <script src="js/plugins/daterangepicker/daterangepicker.js"></script>
+    <script>
+    $(document).ready(function(){
+	$('.datepicker').datepicker({
+                format: 'dd/mm/yyyy'
+});
+         
+        $('form input,form textarea').prop('disabled', true);
+        $( "#page_1 input").prop('disabled', false);
+    });
+	
+    $("#one1").click(function(){
+         valid = true;
+        $('#page_1 input').each(function(){
+                if(!$(this)[0].checkValidity()){
+                valid = false;
+            };
+        });
+        if(valid){
+            $( "#page_2 input,#page_2 textarea").prop('disabled', false);
+            $("#collapse1").collapse('show');
+            $("#one").collapse('hide');
+        }
+        else
+        {
+          $('form button[type="submit"]').click()
+        }
+        
+    });
+
+     $("#two").click(function(){
+        valid = true;
+        $('#page_2 input,#page_2 select').each(function(){
+            if(!$(this)[0].checkValidity()){
+                valid = false;
+            };
+        });
+        if(valid){
+            $( "#page_3 input,#page_3 textarea").prop('disabled', false);
+            $("#collapse2").collapse('show');
+            $("#collapse1").collapse('hide');
+        }
+        else{
+            $('form button[type="submit"]').click()
+        }
+    });
+
+      $("#three").click(function(){
+        valid = true;
+        $('#page_3 input,#page_3 select').each(function(){
+            if(!$(this)[0].checkValidity()){
+                valid = false;
+            };
+        });
+        if(valid){
+            $( "#page_4 input,#page_4 textarea,#page_4 select").prop('disabled', false);   
+            $("#collapse3").collapse('show');
+            $("#collapse2").collapse('hide');
+        }
+        else{
+            $('form button[type="submit"]').click()
+        }
+    });
+	
+	 $("#four").click(function(){
+        valid = true;
+        $('#page_4 input,#page_4 select,#page_4 textarea').each(function(){
+            if(!$(this)[0].checkValidity()){
+                valid = false;
+            };
+        });
+        if(valid){
+            $( "#page_5 input,#page_5 textarea,#page_5 select").prop('disabled', false);   
+            $("#collapse4").collapse('show');
+            $("#collapse3").collapse('hide');
+        }
+        else{
+            $('form button[type="submit"]').click()
+        }
+    });
+	 $("#back4").click(function(){
+    
+        $("#collapse3").collapse('show');
+        $("#collapse4").collapse('hide');
+    
+    });
+
+     $("#back3").click(function(){
+    
+        $("#collapse2").collapse('show');
+        $("#collapse3").collapse('hide');
+    
+    });
+
+     $("#back2").click(function(){
+    
+        $("#collapse1").collapse('show');
+        $("#collapse2").collapse('hide');
+    
+    });
+     $("#back1").click(function(){
+        $("#one").collapse('show');
+    });
+    $("#back1").click(function(){
+        $("#collapse1").collapse('hide');
+    });
+    
+	
+    </script> 
+	<script>
+	var award_cnt = 0;
+    function Add5(obj) {
+		award_cnt++;
+		$('#awardnew').append('<div id="award'+award_cnt+'"><div class="form-group"><label>Title </label><input class="form-control" placeholder="Enter Name" required="required" type="text"></div><div class="form-group" id="data_2"><label>Year of Publication</label><div class="input-group date" data-provide="datepicker"><span class="input-group-addon"><i class="fa fa-calendar"></i></span><input class="form-control" placeholder="Year Of Publication" required="required" type="text"></div></div></div>');
+		$(obj).next().fadeIn();
+	}
+	function Remove5(obj){
+    	$('#award'+award_cnt).remove();
+    	award_cnt--;
+    	if(award_cnt==0){
+        	$(obj).fadeOut();
+    	}   
+   }
+	
+	</script>
+	<script>
+	var honour_cnt = 0;
+    function Add6(obj) {
+		honour_cnt++;
+		$('#honournew').append('<div id="honour'+honour_cnt+'"><div class="form-group"><label>Given By</label><input class="form-control" placeholder="Enter Name" required="required" type="text"></div><div class="form-group" id="data_2"><label>Year of Winning</label><div class="input-group date" data-provide="datepicker"><span class="input-group-addon"><i class="fa fa-calendar"></i></span><input class="form-control" placeholder="Year Of Winning" required="required" type="text"></div></div></div>');
+		$(obj).next().fadeIn();
+	}
+	function Remove6(obj){
+    	$('#honour'+honour_cnt).remove();
+    	honour_cnt--;
+    	if(honour_cnt==0){
+        	$(obj).fadeOut();
+    	}   
+   }
+	
+	</script>
+    <script>
+    var col_cnt = 0;
+    function Add2(obj) {
+        col_cnt++;
+        $('#collegenew').append('<div id="newcollege'+col_cnt+'"> <div class="form-group"> <label>Law College</label> <input class="form-control" placeholder="Enter Name of College" required="required" type="text"> </div> <div class="form-group"> <label>Degree</label> <input class="form-control" placeholder="Enter Degree Name" required="required" type="text"> </div> <div class="form-group" id="data_2"> <label>Year Of Graduation</label> <div class="input-group date" data-provide="datepicker" id="data_2"> <span class="input-group-addon"><i class="fa fa-calendar"> </i></span><input class="form-control input-group date" placeholder="mm/dd/yyyy" required="required" type="text"> </div> </div> </div>');
+
+        $(obj).next().fadeIn();
+
+    }
+    function Remove2(obj){
+        $('#newcollege'+col_cnt).remove();
+        col_cnt--;
+        if(col_cnt==0){
+            $(obj).fadeOut();
+        }
+    }
+    var job_cnt = 0;
+    function Add1(obj) {
+job_cnt++;
+$('#jobnew').append('<div id="job'+job_cnt+'"> <div class="form-group"> <label>Job Title</label> <input class="form-control"placeholder= "Enter Job Title" required= "" type="text"> </div> <div class="form-group"> <label>Company Name</label> <input class="form-control"placeholder= "Enter Company Name"required="required" type="text"> </div> <div class="form-group"> <label>Time Duration</label><div class="input-group input-daterange" id="datepicker" data-provide="datepicker"><input class="input-sm form-control" placeholder="mm/dd/yyyy" required="required" type="text"/><span class="input-group-addon">to</span><input class="input-sm form-control"  placeholder="mm/dd/yyyy" required="required" type="text" /></div> </div></div>');
+$(obj).next().fadeIn();
+}
+function Remove1(obj){
+    $('#job'+job_cnt).remove();
+    job_cnt--;
+    if(job_cnt==0){
+        $(obj).fadeOut();
+    }   
+    }
+	
+	
+    var court_cnt = 0;
+    function Add(obj) {
+        court_cnt++;
+        $('#court').append('<div id="court'+court_cnt+'"> <div class="form-group"> <label>Court</label> <input class="form-control"placeholder= "Enter Court you have worked in"required="required" type="text"> </div> </div> </div>');
+        $(obj).next().fadeIn();
+    
+    }
+    function Remove(obj){
+        $('#court'+court_cnt).remove();
+        court_cnt--;
+        if(court_cnt==0){
+            $(obj).fadeOut();
+        }
+    }
+    </script> 
+    <script>
+        $(document).ready(function(){
+            $('#state_sel').select2({
+                maximumSelectionLength: 4,
+            })
+
+            $('#data_2 .input-group.date').datepicker({
+                startView: 1,
+                todayBtn: "linked",
+                keyboardNavigation: false,
+                forceParse: false,
+                autoclose: true,
+                format: "mm/dd/yyyy"
+            });
+            $('#data_5 .input-daterange').datepicker({
+                keyboardNavigation: true,
+                forceParse: true,
+                autoclose: true,
+                format: "mm/yyyy"
+            });
+            $('input[name="daterange"]').daterangepicker();
+            
+           
+            $('#reportrange').daterangepicker({
+                format: 'MM/YYYY',
+                startDate: moment().subtract(29, 'days'),
+                endDate: moment(),
+                minDate: '01/01/2012',
+                maxDate: '12/31/2015',
+                dateLimit: { days: 60 },
+                showDropdowns: true,
+                showWeekNumbers: false,
+                timePicker: false,
+                timePickerIncrement: 1,
+                timePicker12Hour: true,
+                ranges: {
+                    'Today': [moment(), moment()],
+                    'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                    'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                    'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                    'This Month': [moment().startOf('month'), moment().endOf('month')],
+                    'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                },
+                opens: 'right',
+                drops: 'down',
+                buttonClasses: ['btn', 'btn-sm'],
+                applyClass: 'btn-primary',
+                cancelClass: 'btn-default',
+                separator: ' to ',
+                locale: {
+                    applyLabel: 'Submit',
+                    cancelLabel: 'Cancel',
+                    fromLabel: 'From',
+                    toLabel: 'To',
+                    customRangeLabel: 'Custom',
+                    daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr','Sa'],
+                    monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                    firstDay: 1
+                }
+            }, function(start, end, label) {
+                console.log(start.toISOString(), end.toISOString(), label);
+                $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+            });
+
+
+        });
+
+    </script>
+    <script type="text/javascript">
+      var password = document.getElementById("passwordregister"),
+       confirm_password = document.getElementById("conpass");
+      
+      function validatePassword() {
+       if (password.value != confirm_password.value) {
+         confirm_password.setCustomValidity("Passwords Don't Match");
+       } else {
+         confirm_password.setCustomValidity('');
+       }
+      }
+      password.onchange = validatePassword;
+      confirm_password.onkeyup = validatePassword;
+    </script>
+</body>
+</html>
